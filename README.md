@@ -8,5 +8,11 @@ Captura as cores disponíveis e exibe na prateleira do produto.
 3. No método "adaptaCorParaListaProdutos(referenciaElemento)" passe a referencia do elemento da prateleira que contém o atributo [data-id]
 4. Ainda no método "adaptaCorParaListaProdutos(referenciaElemento)" no parametro (referenciaElemento) passe a query do elemento ex: slideColorSpecificationSelection.adaptaCorParaListaProdutos('div[data-id].product')	
 
+# Inicialização
+window.addEventListener('load', () => {
+  const slideColorSpecificationSelection = new SlideColorSpecificationSelection()
+  slideColorSpecificationSelection.adaptaCorParaListaProdutos('div[data-id].product')	
+})
+
 # Observação
 A classe irá capturar o nome das cores e buscar a imagem no path /arquivos/ correspondente. É importante que você tenha em seu "file manager" essas cores com extensão .jpg. Método responspável por esta ação é: "montaCores (cores)"
